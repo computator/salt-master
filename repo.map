@@ -1,1 +1,3 @@
-salt-master salt-master-state
+salt-master salt-master-salt-state
+deluge deluge-salt-state
+mercurial mercurial-salt-state
