@@ -10,7 +10,7 @@ base:
     - deluge.plugins
     - deluge.root
     - deluge.yarss
-    - deluge_settings
+    - deluge.deluge_settings
     # - videos_mount
   'role:mercurial-server':
     - match: grain
