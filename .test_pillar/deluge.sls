@@ -6,3 +6,9 @@ deluged:
     max_active_seeding: 10
     max_connections_global: -1
     max_upload_slots_global: -1
+deluge:
+  yarss:
+    subscriptions:
+      copy_target: /tmp
+      feeds: {}
+      patterns: {}
