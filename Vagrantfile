@@ -6,9 +6,8 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.synced_folder ".", "/srv/salt"
+  config.vm.synced_folder ".test_pillar", "/srv/pillar"
 
   config.vm.provision "salt", install_master: true
-  config.vm.provision "shell", inline: "rm -rf /tmp/pillar"
-  config.vm.provision "file", source: ".test_pillar", destination: "/tmp/pillar"
   config.vm.provision "shell", inline: "salt-call --local state.apply salt-master"
 end
