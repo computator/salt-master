@@ -11,4 +11,9 @@ deluge:
     subscriptions:
       copy_target: /tmp
       feeds: {}
-      patterns: {}
+      patterns:
+        Test1:
+        Test2:
+        Test3: Testing 3
+        Test4: Testing 4
+        Test5: Testing 5
