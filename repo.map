@@ -1,5 +1,5 @@
-salt-master salt-master-salt-state
-deluge deluge-salt-state
-mercurial mercurial-salt-state
-ssh ssh-salt-state
-pia pia-salt-state
+salt-master salt-master-state
+deluge salt-deluge-state
+mercurial salt-mercurial-state
+ssh salt-ssh-state
+pia salt-pia-state
