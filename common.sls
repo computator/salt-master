@@ -4,7 +4,3 @@ utility-packages:
       - vim
       - htop
       - screen
-
-avahi:
-  pkg.installed:
-    - name: avahi-daemon
