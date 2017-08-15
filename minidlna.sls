@@ -13,3 +13,7 @@ minidlna-config:
   file.blockreplace:
     - name: /etc/minidlna.conf
     - append_if_not_found: true
+    - require:
+      - pkg: minidlna
+    - watch_in:
+      - service: minidlna
