@@ -15,3 +15,5 @@ base:
     - match: grain
     - mercurial
     - mercurial.ssh-server
+  'monolith':
+    - nas
