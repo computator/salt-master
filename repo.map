@@ -4,3 +4,4 @@ mercurial salt-mercurial-state
 ssh salt-ssh-state
 pia salt-pia-state
 serviio salt-serviio-state
+nas salt-nas-state
