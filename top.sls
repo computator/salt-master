@@ -6,10 +6,9 @@ base:
     - ssh
   'role:seedbox':
     - match: grain
-    - deluge.vpn
-    - deluge.plugins
-    - deluge.root
+    - deluge
     - deluge.yarss
+    - deluge.vpn
     # - videos_mount
   'role:mercurial-server':
     - match: grain
