@@ -11,8 +11,7 @@ google-chrome:
     - name: google-chrome-{{version}}
 
 google-chrome-setdefault:
-  file.replace:
-    - name: /home/computator/.config/mimeapps.list
-    - pattern: (text/(?:html|xml)|x-scheme-handler/(?:https?|ftp))=[^;]*?$
-    - repl: \1=google-chrome-{{version}}.desktop
-    - ignore_if_missing: true
+  cmd.run:
+    - name: xdg-settings set default-web-browser google-chrome-{{version}}.desktop
+    - unless: xdg-settings check default-web-browser google-chrome-{{version}}.desktop | grep -q yes
+    - runas: computator
