@@ -1,6 +1,8 @@
 base:
   '*':
     - utilities
+  'role:server':
+    - match: grain
     - security
     - monitoring
     - ssh
