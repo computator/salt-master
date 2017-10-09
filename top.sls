@@ -1,6 +1,6 @@
 base:
   '*':
-    - common
+    - utilities
     - security
     - monitoring
     - ssh
