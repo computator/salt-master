@@ -18,3 +18,6 @@ base:
     - mercurial.ssh-server
   'monolith':
     - nas
+  'L@desktop,mercury':
+    - desktop
+    - desktop.development
