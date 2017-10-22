@@ -21,10 +21,6 @@ dconf-defaults:
   file.managed:
     - name: /etc/dconf/db/local.d/10-salt-defaults
     - contents: |
-        [org/compiz/profiles/unity/plugins/core]
-        hsize=2
-        vsize=2
-
         [org/compiz/profiles/unity/plugins/unityshell]
         launcher-hide-mode=1
 
