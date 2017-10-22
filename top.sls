@@ -21,3 +21,8 @@ base:
   'L@desktop,mercury':
     - desktop
     - desktop.development
+
+  {% for machine in salt['cp.list_states']() if machine.startswith('machines.') %}
+  '{{ machine.split('.', 1)[1] }}':
+    - {{ machine }}
+  {% endfor %}
