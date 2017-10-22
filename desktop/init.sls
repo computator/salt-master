@@ -5,8 +5,15 @@ include:
 # remove transmission
 
 vlc:
-  pkg.installed
-# set default
+  pkg.installed: []
+  cmd.run:
+    - name: xdg-mime default vlc.desktop video/mp4 video/x-matroska
+    - unless:
+      - test "$(xdg-mime query default video/mp4)" = "vlc.desktop"
+      - test "$(xdg-mime query default video/x-matroska)" = "vlc.desktop"
+    - runas: computator
+    - require:
+      - pkg: vlc
 
 dconf-profile:
   file.managed:
