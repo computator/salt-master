@@ -15,3 +15,5 @@ google-chrome-setdefault:
     - name: xdg-settings set default-web-browser google-chrome-{{version}}.desktop
     - unless: xdg-settings check default-web-browser google-chrome-{{version}}.desktop | grep -q yes
     - runas: computator
+    - require:
+      - pkg: google-chrome
