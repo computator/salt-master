@@ -1,4 +1,4 @@
 sshpki:
   hostkey:
   users:
-    ubuntu-xenial:
+    ubuntu:
