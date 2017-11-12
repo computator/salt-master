@@ -8,5 +8,5 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder ".test_pillar", "/srv/pillar"
 
   config.vm.provision "salt", install_master: true
-  config.vm.provision "highstate", type: "shell", keep_color: true, inline: "salt-call --local --force-color state.apply salt-master"
+  config.vm.provision "highstate", type: "shell", keep_color: true, inline: "salt-call --local --force-color state.apply salt-master.sshpki"
 end
