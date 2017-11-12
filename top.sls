@@ -1,11 +1,13 @@
 base:
   '*':
     - utilities
+    - ssh
+    - ssh.sshpki
   'role:server':
     - match: grain
     - security
     - monitoring
-    - ssh
+    - ssh.server
   'role:seedbox':
     - match: grain
     - deluge
@@ -18,6 +20,8 @@ base:
     - mercurial.ssh-server
   'monolith':
     - nas
+  'desktop':
+    - ssh.server
   'L@desktop,mercury':
     - desktop
     - desktop.development
