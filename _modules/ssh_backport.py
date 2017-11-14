@@ -8,7 +8,6 @@ import re
 
 # Import salt libs
 import salt.utils
-import salt.utils.files
 from salt.exceptions import (
     SaltInvocationError,
     CommandExecutionError,
@@ -63,7 +62,7 @@ def host_keys(keydir=None, private=True, certs=True):
             if m.group('pub'):
                 kname += m.group('pub')
             try:
-                with salt.utils.files.fopen(os.path.join(keydir, fn_), 'r') as _fh:
+                with salt.utils.fopen(os.path.join(keydir, fn_), 'r') as _fh:
                     # As of RFC 4716 "a key file is a text file, containing a
                     # sequence of lines", although some SSH implementations
                     # (e.g. OpenSSH) manage their own format(s).  Please see
