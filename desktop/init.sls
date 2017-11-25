@@ -22,6 +22,10 @@ gsettings-defaults:
         [org.compiz.unityshell]
         launcher-hide-mode=1
 
+        [org.compiz.core]
+        hsize=2
+        vsize=2
+
         [org.gnome.settings-daemon.plugins.media-keys]
         www='<Primary><Shift>b'
 

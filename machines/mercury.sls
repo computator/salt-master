@@ -1,10 +1,8 @@
-dconf-hidpi:
+gsettings-hidpi:
   file.managed:
-    - name: /etc/dconf/db/local.d/10-salt-hidpi
+    - name: /usr/share/glib-2.0/schemas/95_salt-hidpi.gschema.override
     - contents: |
-        [org/compiz/profiles/unity/plugins/core]
-        hsize=2
-        vsize=2
-    - makedirs: true
+        [com.ubuntu.user-interface]
+        scale-factor={'eDP-1': 12}
     - onchanges_in:
-      - cmd: dconf-defaults
+      - cmd: gsettings-defaults
