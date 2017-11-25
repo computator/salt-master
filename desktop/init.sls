@@ -15,36 +15,25 @@ vlc:
     - require:
       - pkg: vlc
 
-dconf-profile:
+gsettings-defaults:
   file.managed:
-    - name: /etc/dconf/profile/user
+    - name: /usr/share/glib-2.0/schemas/50_salt-defaults.gschema.override
     - contents: |
-        user-db:user
-        system-db:local
-    - makedirs: true
-    - replace: false
-
-dconf-defaults:
-  file.managed:
-    - name: /etc/dconf/db/local.d/10-salt-defaults
-    - contents: |
-        [org/compiz/profiles/unity/plugins/unityshell]
+        [org.compiz.unityshell]
         launcher-hide-mode=1
 
-        [org/gnome/settings-daemon/plugins/media-keys]
+        [org.gnome.settings-daemon.plugins.media-keys]
         www='<Primary><Shift>b'
 
-        [org/gtk/settings/file-chooser]
+        [org.gtk.Settings.FileChooser]
         show-hidden=true
 
-        [org/gnome/nautilus/preferences]
+        [org.gnome.nautilus.preferences]
         default-folder-viewer='list-view'
 
-        [org/gnome/nautilus/list-view]
+        [org.gnome.nautilus.list-view]
         default-visible-columns=['name', 'size', 'type', 'date_modified', 'owner', 'group', 'permissions']
-    - makedirs: true
   cmd.run:
-    - name: dconf update
+    - name: glib-compile-schemas /usr/share/glib-2.0/schemas
     - onchanges:
-      - file: dconf-defaults
-      - file: dconf-profile
+      - file: gsettings-defaults
