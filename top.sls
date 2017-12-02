@@ -8,6 +8,7 @@ base:
     - security
     - monitoring
     - ssh.server
+    - postfix
   'role:seedbox':
     - match: grain
     - deluge
