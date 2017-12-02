@@ -12,6 +12,3 @@ tmux:
 
 dnsutils:
   pkg.installed
-
-bind9-host:
-  pkg.installed
