@@ -21,6 +21,7 @@ base:
     - mercurial.ssh-server
   'monolith':
     - nas
+    - mercurial.ssh-server
   'desktop':
     - ssh.server
   'L@desktop,mercury':
