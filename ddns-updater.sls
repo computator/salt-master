@@ -18,7 +18,7 @@ ddns-updater-config:
     - name: /etc/ddns-updater.conf
     - contents: |
         #URL=https://dynamicdns.park-your-domain.com/update?host=[host]&domain=[domain_name]&password=[ddns_password]&ip=[your_ip]
-        URL=https://dynamicdns.park-your-domain.com/update?host={{ salt['pillar.get']('ddns:host', grains.get('host')) }}&domain={{ salt['pillar.get']('ddns:domain') }}&password={{ salt['pillar.get']('ddns:password') }}
+        URL=https://dynamicdns.park-your-domain.com/update?host={{ salt['pillar.get']('ddns:host', grains.get('id')) }}&domain={{ salt['pillar.get']('ddns:domain') }}&password={{ salt['pillar.get']('ddns:password') }}
 
 ddns-updater-timer:
   file.managed:
