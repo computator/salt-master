@@ -1,1 +1,1 @@
-../lib/sshpki_pillar/_reactors/sshpki-pull-keys.sls
+../sshpki/_reactors/sshpki-pull-keys.sls

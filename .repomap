@@ -7,4 +7,4 @@ serviio salt-serviio-state
 nas salt-nas-state
 postfix salt-postfix-state
 
-lib/sshpki_pillar salt-sshpki-pillar
+sshpki salt-sshpki

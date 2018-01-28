@@ -1,1 +1,1 @@
-../lib/sshpki_pillar/_runners/sshpki.py
+../sshpki/_runners/sshpki.py

@@ -2,7 +2,7 @@ base:
   '*':
     - utilities
     - ssh
-    - ssh.sshpki
+    - sshpki
   'role:server':
     - match: grain
     - security

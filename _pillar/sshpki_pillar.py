@@ -1,1 +1,1 @@
-../lib/sshpki_pillar/sshpki_pillar.py
+../sshpki/_pillar/sshpki_pillar.py
