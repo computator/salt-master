@@ -22,12 +22,13 @@ base:
   'monolith':
     - nas
     - mercurial.ssh-server
-  'desktop':
+  'L@desktop,ephemeris':
     - ssh.server
-  'L@monolith,desktop':
+  'L@monolith,desktop,ephemeris':
     - ddns-updater
-  'L@desktop,mercury':
+  'L@desktop,mercury,ephemeris':
     - desktop
+  'L@desktop,mercury':
     - desktop.development
 
   {% for machine in salt['cp.list_states']() if machine.startswith('machines.') %}
