@@ -5,7 +5,7 @@ samba:
     - content: |
         [global]
         server min protocol = SMB2
-        smb encrypt = desired
+        ;smb encrypt = desired
         lanman auth = no
         ntlm auth = no
     - append_if_not_found: true
