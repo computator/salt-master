@@ -6,5 +6,6 @@ pia salt-pia-state
 serviio salt-serviio-state
 nas salt-nas-state
 postfix salt-postfix-state
+podman salt-podman-state
 
 sshpki salt-sshpki
