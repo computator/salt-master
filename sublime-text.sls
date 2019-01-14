@@ -1,12 +1,7 @@
 sublime-text:
-  pkgrepo.managed:
-    - name: deb https://download.sublimetext.com/ apt/stable/
-    - file: /etc/apt/sources.list.d/sublime-text.list
-    - key_url: https://download.sublimetext.com/sublimehq-pub.gpg
-    - require_in:
-      - pkg: sublime-text
-  pkg.installed:
-    - name: sublime-text
+  cmd.run:
+    - name: snap install --classic sublime-text > /dev/null
+    - unless: snap list sublime-text
 
 sublime-text-package-cotrol:
   file.managed:
@@ -21,4 +16,4 @@ sublime-text-package-cotrol:
     - replace: false
     - show_changes: false
     - require:
-      - pkg: sublime-text
+      - cmd: sublime-text
