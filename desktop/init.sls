@@ -19,13 +19,6 @@ gsettings-defaults:
   file.managed:
     - name: /usr/share/glib-2.0/schemas/50_salt-defaults.gschema.override
     - contents: |
-        [org.compiz.unityshell]
-        launcher-hide-mode=1
-
-        [org.compiz.core]
-        hsize=2
-        vsize=2
-
         [org.gnome.settings-daemon.plugins.media-keys]
         www='<Primary><Shift>b'
 
@@ -37,6 +30,7 @@ gsettings-defaults:
 
         [org.gnome.nautilus.list-view]
         default-visible-columns=['name', 'size', 'type', 'date_modified', 'owner', 'group', 'permissions']
+        default-zoom-level='small'
   cmd.run:
     - name: glib-compile-schemas /usr/share/glib-2.0/schemas
     - onchanges:
