@@ -6,7 +6,7 @@ include:
 vagrant:
   pkg.installed:
     - sources:
-      - vagrant: {{checkpoint['current_download_url']}}vagrant_{{checkpoint['current_version']}}_{% if grains['osarch'] == "amd64" %}x86_64{% else %}i686{% endif %}.{% if grains['os_family'] == "Debian" %}deb{% elif grains['os_family'] == "RedHat" %}rpm{% endif %}
+      - vagrant: https://releases.hashicorp.com/vagrant/{{checkpoint['current_version']}}/vagrant_{{checkpoint['current_version']}}_{% if grains['osarch'] == "amd64" %}x86_64{% else %}i686{% endif %}.{% if grains['os_family'] == "Debian" %}deb{% elif grains['os_family'] == "RedHat" %}rpm{% endif %}
     - unless:
       - dpkg-query -s vagrant 2> /dev/null | grep -q 'Status:.*installed'
       - dpkg-query -s vagrant 2> /dev/null | grep Version | grep -qF '{{checkpoint['current_version']}}'
