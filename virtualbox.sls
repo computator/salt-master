@@ -9,6 +9,6 @@ virtualbox:
     - require_in:
       - pkg: virtualbox
   pkg.installed:
-    - name: virtualbox-5.1
+    - name: virtualbox-6.0
     - require:
       - pkg: dkms
