@@ -24,7 +24,7 @@ base:
     - mercurial.ssh-server
   'L@desktop,ephemeris':
     - ssh.server
-  'L@monolith,desktop,ephemeris':
+  'L@monolith,desktop':
     - ddns-updater
   'L@desktop,mercury,ephemeris':
     - desktop
