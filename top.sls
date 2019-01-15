@@ -28,6 +28,7 @@ base:
     - ddns-updater
   'L@desktop,mercury,ephemeris':
     - desktop
+    - desktop.user-prefs
   'L@desktop,mercury':
     - desktop.development
 
