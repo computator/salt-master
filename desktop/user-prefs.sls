@@ -23,7 +23,7 @@ use-theme-transparency: 'false'
 use-transparent-background: 'true'
 background-transparency-percent: 20
 use-system-font: 'false'
-font: "'Monospace 8'"
+font: "'Monospace 9'"
 scrollback-unlimited: 'true'
 {% endload %}
 
