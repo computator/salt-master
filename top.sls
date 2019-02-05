@@ -22,6 +22,8 @@ base:
   'monolith':
     - nas
     - mercurial.ssh-server
+    - security
+    - postfix.local
   'L@desktop,ephemeris':
     - ssh.server
   'L@monolith,desktop':
