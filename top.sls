@@ -28,6 +28,8 @@ base:
     - ssh.server
   'L@monolith,desktop':
     - ddns-updater
+  'L@desktop,mercury,monolith':
+    - podman
   'L@desktop,mercury,ephemeris':
     - desktop
     - desktop.user-prefs
