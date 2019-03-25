@@ -24,6 +24,13 @@ base:
     - mercurial.ssh-server
     - security
     - postfix.local
+  'L@nucleus':
+    - security
+    - monitoring
+    - ssh.server
+    - postfix.local
+    - deluge
+    - deluge.yarss
   'L@desktop,ephemeris':
     - ssh.server
   'L@monolith,desktop':
