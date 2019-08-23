@@ -24,7 +24,7 @@ base:
     - mercurial.ssh-server
     - security
     - postfix.local
-  'L@nucleus,sbtest':
+  'L@nucleus,nexus':
     - security
     - monitoring
     - ssh.server
