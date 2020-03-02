@@ -24,6 +24,7 @@ base:
     - mercurial.ssh-server
     - security
     - postfix.local
+    - podman
   'L@nucleus,nexus':
     - security
     - monitoring
@@ -31,12 +32,11 @@ base:
     - postfix.local
     - deluge
     - deluge.yarss
+    - podman
   'L@desktop,ephemeris':
     - ssh.server
   'L@monolith,desktop':
     - ddns-updater
-  'L@desktop,mercury,monolith':
-    - podman
   'L@desktop,mercury,ephemeris':
     - desktop
     - desktop.user-prefs
